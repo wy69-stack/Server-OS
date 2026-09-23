@@ -1,0 +1,32 @@
+===BEGIN DHCP SUBMISSION===
+student_id: 6705140049
+timestamp: 2026-09-23T04:46:47Z
+hostname: ubuntu
+---[dhcpd.conf]---
+default-lease-time 21600;
+max-lease-time 7200;
+authoritative;
+
+subnet 192.168.176.0 netmask 255.255.255.0 {
+  range 192.168.176.91 192.168.176.191;
+  option routers 192.168.176.1;
+  option subnet-mask 255.255.255.0;
+}
+
+host reserved-client {
+  hardware ethernet 52:54:00:3d:a7:ae;
+  fixed-address 192.168.176.223;
+}
+---[config syntax test: dhcpd -t]---
+Internet Systems Consortium DHCP Server 4.4.3-P1
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+Config file: /etc/dhcp/dhcpd.conf
+Database file: /var/lib/dhcp/dhcpd.leases
+PID file: /var/run/dhcpd.pid
+---[service status]---
+active
+---[integrity]---
+conf_sha256: 2b3e860d5c8319461f47b323acc99a315295659f0be0ff9213fcf6b1cfbc037e
+===END DHCP SUBMISSION===
