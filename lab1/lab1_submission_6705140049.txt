@@ -1,0 +1,19 @@
+===BEGIN LAB1 SUBMISSION===
+student_id: 6705140049
+timestamp: 2026-09-23T04:18:57Z
+hostname: ubuntu
+---[user: getent passwd]---
+olga523:x:1002:1003::/home/olga523:/bin/bash
+---[group: getent group]---
+research:x:1004:olga523
+---[user-in-group: id]---
+uid=1002(olga523) gid=1003(olga523) groups=1003(olga523),1004(research)
+---[file stat: home file mode/owner]---
+/home/olga523/report_4668.txt mode=740 owner=olga523 group=research
+---[sshd effective config]---
+port 2566
+permitrootlogin no
+passwordauthentication no
+---[integrity]---
+sshd_sha256: 5dbb3cb17a3d263bacd978ecd5b562f0e8b0ad95607cd724a688f46b4bdf12d5
+===END LAB1 SUBMISSION===
